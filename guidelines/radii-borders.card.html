@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Radii & Borders" subtitle="Soft rounding · confident hairlines" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8" /><link rel="stylesheet" href="../styles.css" />
+<style>
+ body{margin:0;background:var(--surface-page);padding:22px 24px;font-family:var(--font-sans);}
+ .row{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap;}
+ .item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+ .box{width:74px;height:58px;background:var(--surface-card);border:1.5px solid var(--border-default);}
+ .t{font-size:11px;color:var(--text-faint);}
+ .pill{width:96px;height:38px;border-radius:var(--radius-pill);background:var(--espresso-700);}
+</style></head>
+<body><div class="row">
+ <div class="item"><div class="box" style="border-radius:var(--radius-xs)"></div><div class="t">xs · 4</div></div>
+ <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="t">sm · 8</div></div>
+ <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><div class="t">md · 12</div></div>
+ <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="t">lg · 18</div></div>
+ <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><div class="t">xl · 28</div></div>
+ <div class="item"><div class="pill"></div><div class="t">pill</div></div>
+ <div class="item"><div class="box" style="border:2.5px solid var(--border-strong);border-radius:var(--radius-md)"></div><div class="t">2.5px ink</div></div>
+</div></body></html>

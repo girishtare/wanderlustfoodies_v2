@@ -1,0 +1,108 @@
+/* ============================================================
+   Wanderlust Foodies — COLOR TOKENS
+   A vintage-adventure palette: espresso ink on warm paper,
+   with spice, trek-pine and turmeric accents drawn from the
+   badge logo, Himalayan trails and Indian home cooking.
+   ============================================================ */
+:root{
+  /* --- Brand ink (espresso brown, sampled from the badge logo) --- */
+  --espresso-900:#241405;   /* darkest — deep roast */
+  --espresso-800:#2E1A08;
+  --espresso-700:#382010;   /* ★ core brand ink (logo) */
+  --espresso-600:#4A2E18;
+  --espresso-500:#5E3F26;
+  --espresso-400:#7A5A3C;   /* muted brown text */
+  --espresso-300:#9C7E5E;
+
+  /* --- Warm paper & kraft neutrals --- */
+  --paper-0:#FFFFFF;
+  --paper-50:#FDFAF4;       /* card / raised surface */
+  --paper-100:#F7F1E5;      /* ★ page background — warm cream */
+  --paper-200:#EFE6D3;      /* sunk panel / hover wash */
+  --kraft-300:#E3D5BC;      /* hairline tint */
+  --kraft-400:#D2BE9C;      /* borders on cream */
+  --kraft-500:#B9A179;      /* faint ink / disabled */
+
+  /* --- Spice (terracotta) — primary action, appetite --- */
+  --spice-700:#9A3D18;
+  --spice-600:#B8481E;
+  --spice-500:#C2562A;      /* ★ primary accent */
+  --spice-400:#D67843;
+  --spice-200:#F0C7AC;
+  --spice-50:#F9E7DB;
+
+  /* --- Trek pine — mountains, trail, "go" --- */
+  --pine-800:#22382A;
+  --pine-700:#2C4632;       /* ★ deep trek green */
+  --pine-500:#3C5A43;
+  --pine-300:#7E9A82;
+  --pine-100:#DCE6DC;
+  --pine-50:#EAF0E9;
+
+  /* --- Turmeric — golden highlight, recipes, stars --- */
+  --turmeric-600:#C98A0E;
+  --turmeric-500:#E0A21A;   /* ★ gold accent */
+  --turmeric-300:#F0CB6B;
+  --turmeric-100:#F6E6BC;
+  --turmeric-50:#FBF3DA;
+
+  /* --- Altitude sky — sparing cool accent (trail maps, info) --- */
+  --sky-600:#456E82;
+  --sky-500:#6E93A6;
+  --sky-100:#DCE7EC;
+
+  /* --- Status hues --- */
+  --brick-500:#B23A2E;      /* danger / error */
+  --brick-50:#F6E1DD;
+
+  /* =========================================================
+     SEMANTIC ALIASES — reach for these in components
+     ========================================================= */
+  /* Text */
+  --text-strong:var(--espresso-900);
+  --text-body:var(--espresso-700);
+  --text-muted:var(--espresso-400);
+  --text-faint:var(--kraft-500);
+  --text-on-dark:var(--paper-100);
+  --text-on-spice:#FFFFFF;
+  --text-link:var(--spice-600);
+
+  /* Surfaces */
+  --surface-page:var(--paper-100);
+  --surface-card:var(--paper-50);
+  --surface-raised:var(--paper-0);
+  --surface-sunk:var(--paper-200);
+  --surface-ink:var(--espresso-700);     /* dark sections / footer */
+  --surface-ink-deep:var(--espresso-900);
+
+  /* Borders & lines */
+  --border-hairline:var(--kraft-300);
+  --border-default:var(--kraft-400);
+  --border-strong:var(--espresso-700);
+  --border-on-dark:rgba(247,241,229,0.18);
+
+  /* Accents (semantic) */
+  --accent-primary:var(--spice-500);
+  --accent-primary-hover:var(--spice-600);
+  --accent-primary-press:var(--spice-700);
+  --accent-trek:var(--pine-700);
+  --accent-recipe:var(--turmeric-500);
+  --accent-info:var(--sky-500);
+
+  /* Status */
+  --status-success:var(--pine-500);
+  --status-success-bg:var(--pine-50);
+  --status-warning:var(--turmeric-600);
+  --status-warning-bg:var(--turmeric-50);
+  --status-danger:var(--brick-500);
+  --status-danger-bg:var(--brick-50);
+
+  /* Focus ring */
+  --focus-ring:var(--turmeric-500);
+
+  /* Category tags (blog taxonomy) */
+  --tag-travel:var(--spice-500);
+  --tag-trek:var(--pine-700);
+  --tag-recipe:var(--turmeric-600);
+  --tag-story:var(--sky-600);
+}

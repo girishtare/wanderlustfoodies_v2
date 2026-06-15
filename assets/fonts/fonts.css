@@ -1,0 +1,20 @@
+/* Wanderlust Foodies — self-hosted webfonts
+   Oswald  → display / signage (condensed, vintage badge feel)
+   Bitter  → editorial body & long-form memoir / recipe prose (warm slab serif)
+   Hanken Grotesk → UI, labels, meta (clean humanist sans) */
+
+@font-face{font-family:'Oswald';font-style:normal;font-weight:400;font-display:swap;src:url('oswald-400.woff2') format('woff2');}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:500;font-display:swap;src:url('oswald-500.woff2') format('woff2');}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:600;font-display:swap;src:url('oswald-600.woff2') format('woff2');}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:700;font-display:swap;src:url('oswald-700.woff2') format('woff2');}
+
+@font-face{font-family:'Bitter';font-style:italic;font-weight:400;font-display:swap;src:url('bitter-400i.woff2') format('woff2');}
+@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url('bitter-400.woff2') format('woff2');}
+@font-face{font-family:'Bitter';font-style:normal;font-weight:500;font-display:swap;src:url('bitter-500.woff2') format('woff2');}
+@font-face{font-family:'Bitter';font-style:normal;font-weight:600;font-display:swap;src:url('bitter-600.woff2') format('woff2');}
+@font-face{font-family:'Bitter';font-style:normal;font-weight:700;font-display:swap;src:url('bitter-700.woff2') format('woff2');}
+
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url('hankengrotesk-400.woff2') format('woff2');}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url('hankengrotesk-500.woff2') format('woff2');}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url('hankengrotesk-600.woff2') format('woff2');}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url('hankengrotesk-700.woff2') format('woff2');}

@@ -1,0 +1,53 @@
+/* ============================================================
+   Wanderlust Foodies — SPACING, RADIUS, SHADOW, BORDER, MOTION
+   ============================================================ */
+:root{
+  /* Spacing scale (4px base) */
+  --space-0:0;
+  --space-1:0.25rem;   /* 4 */
+  --space-2:0.5rem;    /* 8 */
+  --space-3:0.75rem;   /* 12 */
+  --space-4:1rem;      /* 16 */
+  --space-5:1.5rem;    /* 24 */
+  --space-6:2rem;      /* 32 */
+  --space-7:3rem;      /* 48 */
+  --space-8:4rem;      /* 64 */
+  --space-9:6rem;      /* 96 */
+  --space-10:8rem;     /* 128 — section rhythm */
+
+  /* Container widths */
+  --container-prose:42rem;   /* memoir reading column */
+  --container-content:64rem;
+  --container-wide:78rem;
+  --gutter:clamp(1.25rem,4vw,3rem); /* @kind spacing */
+
+  /* Radii — soft & rounded, like a stamped badge edge */
+  --radius-xs:4px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+  --radius-xl:28px;
+  --radius-pill:999px;
+
+  /* Borders */
+  --border-width:1.5px;       /* the brand likes a confident hairline */
+  --border-width-thick:2.5px;
+
+  /* Shadows — warm-brown tinted, soft (paper & ink, never blue) */
+  --shadow-xs:0 1px 2px rgba(56,32,16,0.08);
+  --shadow-sm:0 2px 6px rgba(56,32,16,0.10);
+  --shadow-md:0 6px 18px rgba(56,32,16,0.12);
+  --shadow-lg:0 16px 40px rgba(56,32,16,0.16);
+  --shadow-ink:0 10px 30px rgba(36,20,5,0.35);   /* on dark sections */
+
+  /* Focus ring */
+  --ring-width:3px;
+  --ring-offset:2px;
+
+  /* Motion — grounded, no bounce; gentle ease */
+  --ease-standard:cubic-bezier(0.32,0.08,0.24,1); /* @kind other */
+  --ease-out:cubic-bezier(0.16,1,0.3,1); /* @kind other */
+  --dur-fast:120ms; /* @kind other */
+  --dur-base:200ms; /* @kind other */
+  --dur-slow:340ms; /* @kind other */
+}

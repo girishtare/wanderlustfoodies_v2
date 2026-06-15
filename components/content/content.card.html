@@ -1,0 +1,62 @@
+<!-- @dsCard group="Components" viewport="700x540" name="Badges, Stats & Content Cards" subtitle="Taxonomy tags, metrics, blog & recipe cards" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 26px; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 24px; }
+  .cols { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
+  .cap { font-family: var(--font-sans); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+  .stats { display: flex; gap: 28px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel" data-presets="react">
+  const { Badge, Stat, ArticleCard, RecipeCard } = window.WanderlustFoodiesDesignSystem_288b64;
+  function Demo() {
+    return (
+      <div>
+        <div className="cap">Taxonomy &amp; status badges</div>
+        <div className="row">
+          <Badge tone="travel" solid>Travel</Badge>
+          <Badge tone="trek" solid>Trek</Badge>
+          <Badge tone="recipe" solid>Recipe</Badge>
+          <Badge tone="story" solid>Story</Badge>
+          <Badge tone="travel">Travel</Badge>
+          <Badge tone="trek">Trek</Badge>
+          <Badge tone="recipe">Gluten-free</Badge>
+          <Badge tone="success">Easy</Badge>
+          <Badge tone="warning">Navratri</Badge>
+        </div>
+        <div className="stats" style={{ marginBottom: 26 }}>
+          <Stat value="25+" label="Destinations" />
+          <Stat value="50+" label="Recipes" />
+          <Stat value="∞" label="Stories" />
+        </div>
+        <div className="cols">
+          <ArticleCard
+            image="../../assets/img/trek-sandakphu.jpg"
+            category="trek" categoryLabel="Trek"
+            title="Trekking with Friends: Off to Sandakphu!"
+            excerpt="A spectacular Himalayan journey blending natural beauty, culture and panoramic mountains."
+            author="Girish" date="Feb 9, 2025" readTime="26 min read"
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <RecipeCard image="../../assets/img/recipe-nachni-bhakri.jpg" title="Nachni (Ragi) Bhakri" time="20 min" tags={["Gluten-free"]} blurb="The secret to soft, pliable, easy-to-digest Nachni Bhakri every time." />
+            <RecipeCard image="../../assets/img/recipe-pomfret-fry.jpg" title="Pomfret / Paplet Fry" time="25 min" tags={["Konkan"]} blurb="The authentic Konkan-coast marinade that makes every bite mouth-watering." />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

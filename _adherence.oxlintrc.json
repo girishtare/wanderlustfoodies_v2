@@ -1,0 +1,417 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/brand/**",
+              "components/content/**",
+              "components/core/**",
+              "data.js",
+              "docs/**",
+              "ui_kits/website/**",
+              "website/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Oswald|Bitter|Hanken Grotesk))/i]",
+        "message": "Font not provided by the design system. Available: Oswald, Bitter, Hanken Grotesk."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArticleCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:image|category|categoryLabel|title|excerpt|author|date|readTime|href|key|ref|className|style|children)$/]",
+        "message": "<ArticleCard> doesn't accept that prop. Declared props: image, category, categoryLabel, title, excerpt, author, date, readTime, href."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArticleCard'] > JSXAttribute[name.name='category'] > Literal[value!=/^(?:travel|trek|recipe|story)$/]",
+        "message": "<ArticleCard> category must be one of 'travel' | 'trek' | 'recipe' | 'story'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|name|size|ring|key|ref|className|style|children)$/]",
+        "message": "<Avatar> doesn't accept that prop. Declared props: src, alt, name, size, ring."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|solid|size|children|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: tone, solid, size, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:travel|trek|recipe|story|neutral|success|warning|danger)$/]",
+        "message": "<Badge> tone must be one of 'travel' | 'trek' | 'recipe' | 'story' | 'neutral' | 'success' | 'warning' | 'danger'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md)$/]",
+        "message": "<Badge> size must be one of 'sm' | 'md'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|iconLeft|iconRight|fullWidth|disabled|as|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, iconLeft, iconRight, fullWidth, disabled, as, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|trek|ghost)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'trek' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:button|a)$/]",
+        "message": "<Button> as must be one of 'button' | 'a'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|helper|error|iconLeft|style|key|ref|className|style|children)$/]",
+        "message": "<Input> doesn't accept that prop. Declared props: label, helper, error, iconLeft, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RecipeCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:image|title|blurb|time|tags|href|key|ref|className|style|children)$/]",
+        "message": "<RecipeCard> doesn't accept that prop. Declared props: image, title, blurb, time, tags, href."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StampSeal'] > JSXAttribute > JSXIdentifier[name!=/^(?:topText|bottomText|center|sub|size|color|background|key|ref|className|style|children)$/]",
+        "message": "<StampSeal> doesn't accept that prop. Declared props: topText, bottomText, center, sub, size, color, background."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Stat'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|description|align|key|ref|className|style|children)$/]",
+        "message": "<Stat> doesn't accept that prop. Declared props: value, label, description, align."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Stat'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<Stat> align must be one of 'left' | 'center'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "ArticleCard": {
+        "replaces": []
+      },
+      "Avatar": {
+        "replaces": []
+      },
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Input": {
+        "replaces": []
+      },
+      "RecipeCard": {
+        "replaces": []
+      },
+      "StampSeal": {
+        "replaces": []
+      },
+      "Stat": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent-info",
+      "--accent-primary",
+      "--accent-primary-hover",
+      "--accent-primary-press",
+      "--accent-recipe",
+      "--accent-trek",
+      "--border-default",
+      "--border-hairline",
+      "--border-on-dark",
+      "--border-strong",
+      "--border-width",
+      "--border-width-thick",
+      "--brick-50",
+      "--brick-500",
+      "--container-content",
+      "--container-prose",
+      "--container-wide",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-out",
+      "--ease-standard",
+      "--espresso-300",
+      "--espresso-400",
+      "--espresso-500",
+      "--espresso-600",
+      "--espresso-700",
+      "--espresso-800",
+      "--espresso-900",
+      "--focus-ring",
+      "--font-display",
+      "--font-mono",
+      "--font-sans",
+      "--font-serif",
+      "--gutter",
+      "--kraft-300",
+      "--kraft-400",
+      "--kraft-500",
+      "--leading-normal",
+      "--leading-relaxed",
+      "--leading-snug",
+      "--leading-tight",
+      "--paper-0",
+      "--paper-100",
+      "--paper-200",
+      "--paper-50",
+      "--pine-100",
+      "--pine-300",
+      "--pine-50",
+      "--pine-500",
+      "--pine-700",
+      "--pine-800",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xl",
+      "--radius-xs",
+      "--ring-offset",
+      "--ring-width",
+      "--shadow-ink",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--shadow-xs",
+      "--sky-100",
+      "--sky-500",
+      "--sky-600",
+      "--space-0",
+      "--space-1",
+      "--space-10",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--spice-200",
+      "--spice-400",
+      "--spice-50",
+      "--spice-500",
+      "--spice-600",
+      "--spice-700",
+      "--status-danger",
+      "--status-danger-bg",
+      "--status-success",
+      "--status-success-bg",
+      "--status-warning",
+      "--status-warning-bg",
+      "--surface-card",
+      "--surface-ink",
+      "--surface-ink-deep",
+      "--surface-page",
+      "--surface-raised",
+      "--surface-sunk",
+      "--tag-recipe",
+      "--tag-story",
+      "--tag-travel",
+      "--tag-trek",
+      "--text-body",
+      "--text-display",
+      "--text-eyebrow",
+      "--text-faint",
+      "--text-h1",
+      "--text-h2",
+      "--text-h3",
+      "--text-h4",
+      "--text-lead",
+      "--text-link",
+      "--text-muted",
+      "--text-on-dark",
+      "--text-on-spice",
+      "--text-sm",
+      "--text-strong",
+      "--text-xs",
+      "--tracking-display",
+      "--tracking-eyebrow",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--turmeric-100",
+      "--turmeric-300",
+      "--turmeric-50",
+      "--turmeric-500",
+      "--turmeric-600",
+      "--type-eyebrow-transform",
+      "--weight-bold",
+      "--weight-medium",
+      "--weight-regular",
+      "--weight-semibold"
+    ],
+    "tokenKinds": {
+      "--espresso-900": "color",
+      "--espresso-800": "color",
+      "--espresso-700": "color",
+      "--espresso-600": "color",
+      "--espresso-500": "color",
+      "--espresso-400": "color",
+      "--espresso-300": "color",
+      "--paper-0": "color",
+      "--paper-50": "color",
+      "--paper-100": "color",
+      "--paper-200": "color",
+      "--kraft-300": "color",
+      "--kraft-400": "color",
+      "--kraft-500": "color",
+      "--spice-700": "color",
+      "--spice-600": "color",
+      "--spice-500": "color",
+      "--spice-400": "color",
+      "--spice-200": "color",
+      "--spice-50": "color",
+      "--pine-800": "color",
+      "--pine-700": "color",
+      "--pine-500": "color",
+      "--pine-300": "color",
+      "--pine-100": "color",
+      "--pine-50": "color",
+      "--turmeric-600": "color",
+      "--turmeric-500": "color",
+      "--turmeric-300": "color",
+      "--turmeric-100": "color",
+      "--turmeric-50": "color",
+      "--sky-600": "color",
+      "--sky-500": "color",
+      "--sky-100": "color",
+      "--brick-500": "color",
+      "--brick-50": "color",
+      "--text-strong": "font",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-faint": "font",
+      "--text-on-dark": "font",
+      "--text-on-spice": "font",
+      "--text-link": "font",
+      "--surface-page": "color",
+      "--surface-card": "color",
+      "--surface-raised": "color",
+      "--surface-sunk": "color",
+      "--surface-ink": "color",
+      "--surface-ink-deep": "color",
+      "--border-hairline": "color",
+      "--border-default": "color",
+      "--border-strong": "color",
+      "--border-on-dark": "color",
+      "--accent-primary": "color",
+      "--accent-primary-hover": "color",
+      "--accent-primary-press": "color",
+      "--accent-trek": "color",
+      "--accent-recipe": "color",
+      "--accent-info": "color",
+      "--status-success": "color",
+      "--status-success-bg": "color",
+      "--status-warning": "color",
+      "--status-warning-bg": "color",
+      "--status-danger": "color",
+      "--status-danger-bg": "color",
+      "--focus-ring": "color",
+      "--tag-travel": "color",
+      "--tag-trek": "color",
+      "--tag-recipe": "color",
+      "--tag-story": "color",
+      "--font-display": "font",
+      "--font-serif": "font",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--weight-regular": "font",
+      "--weight-medium": "font",
+      "--weight-semibold": "font",
+      "--weight-bold": "font",
+      "--text-display": "font",
+      "--text-h1": "font",
+      "--text-h2": "font",
+      "--text-h3": "font",
+      "--text-h4": "font",
+      "--text-lead": "font",
+      "--text-sm": "font",
+      "--text-xs": "font",
+      "--text-eyebrow": "font",
+      "--leading-tight": "font",
+      "--leading-snug": "font",
+      "--leading-normal": "font",
+      "--leading-relaxed": "font",
+      "--tracking-display": "font",
+      "--tracking-eyebrow": "font",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--type-eyebrow-transform": "font",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--container-prose": "spacing",
+      "--container-content": "spacing",
+      "--container-wide": "spacing",
+      "--gutter": "spacing",
+      "--radius-xs": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-xl": "radius",
+      "--radius-pill": "radius",
+      "--border-width": "spacing",
+      "--border-width-thick": "spacing",
+      "--shadow-xs": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-ink": "shadow",
+      "--ring-width": "spacing",
+      "--ring-offset": "spacing",
+      "--ease-standard": "other",
+      "--ease-out": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "Bitter",
+      "Hanken Grotesk",
+      "Oswald"
+    ]
+  }
+}

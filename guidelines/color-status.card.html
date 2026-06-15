@@ -1,0 +1,18 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Sky & Status" subtitle="Cool accent plus success / warning / danger" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8" /><link rel="stylesheet" href="../styles.css" />
+<style>
+ body{margin:0;background:var(--surface-page);padding:20px;font-family:var(--font-sans);}
+ .grid{display:flex;gap:14px;flex-wrap:wrap;}
+ .sw{width:150px;border-radius:var(--radius-md);overflow:hidden;border:1.5px solid var(--border-hairline);}
+ .chip{height:62px;}
+ .meta{padding:8px 10px;background:var(--surface-card);}
+ .name{font-weight:600;font-size:12.5px;color:var(--text-strong);}
+ .hex{font-size:11px;color:var(--text-faint);letter-spacing:.04em;text-transform:uppercase;}
+</style></head>
+<body><div class="grid">
+ <div class="sw"><div class="chip" style="background:var(--sky-500)"></div><div class="meta"><div class="name">Altitude Sky</div><div class="hex">#6E93A6 · --sky-500</div></div></div>
+ <div class="sw"><div class="chip" style="background:var(--status-success)"></div><div class="meta"><div class="name">Success</div><div class="hex">#3C5A43 · pine</div></div></div>
+ <div class="sw"><div class="chip" style="background:var(--status-warning)"></div><div class="meta"><div class="name">Warning</div><div class="hex">#C98A0E · turmeric</div></div></div>
+ <div class="sw"><div class="chip" style="background:var(--status-danger)"></div><div class="meta"><div class="name">Danger</div><div class="hex">#B23A2E · brick</div></div></div>
+</div></body></html>

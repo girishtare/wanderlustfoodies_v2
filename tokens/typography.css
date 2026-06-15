@@ -1,0 +1,71 @@
+/* ============================================================
+   Wanderlust Foodies — TYPOGRAPHY TOKENS
+   Oswald (display, condensed signage) · Bitter (editorial slab
+   serif for memoir & recipe prose) · Hanken Grotesk (UI/meta).
+   ============================================================ */
+:root{
+  /* Families */
+  --font-display:'Oswald','Arial Narrow',sans-serif;
+  --font-serif:'Bitter','Georgia',serif;
+  --font-sans:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
+  --font-mono:'Bitter','Georgia',serif;
+
+  /* Weights */
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+
+  /* Fluid display scale (Oswald — use UPPERCASE + tracking) */
+  --text-display:clamp(2.75rem,1.6rem+5.6vw,5rem);   /* hero badges */
+  --text-h1:clamp(2.1rem,1.4rem+3.4vw,3.5rem);
+  --text-h2:clamp(1.6rem,1.2rem+2vw,2.5rem);
+  --text-h3:1.5rem;
+  --text-h4:1.25rem;
+
+  /* Text scale (Bitter / Hanken) */
+  --text-lead:1.3125rem;   /* 21px intro paragraphs */
+  --text-body:1.0625rem;   /* 17px reading size */
+  --text-sm:0.9375rem;     /* 15px */
+  --text-xs:0.8125rem;     /* 13px meta */
+  --text-eyebrow:0.75rem;  /* 12px overline labels */
+
+  /* Line heights */
+  --leading-tight:1.04;    /* display */
+  --leading-snug:1.18;     /* headings */
+  --leading-normal:1.5;
+  --leading-relaxed:1.7;   /* long-form memoir */
+
+  /* Letter spacing */
+  --tracking-display:0.01em;
+  --tracking-eyebrow:0.18em;   /* wide overlines, badge arcs */
+  --tracking-tight:-0.01em;
+  --tracking-normal:0;
+
+  /* Semantic roles */
+  --type-eyebrow-transform:uppercase;
+}
+
+/* ---- Optional helper roles (consumers may use directly) ---- */
+.wf-eyebrow{
+  font-family:var(--font-sans);
+  font-weight:var(--weight-semibold);
+  font-size:var(--text-eyebrow);
+  letter-spacing:var(--tracking-eyebrow);
+  text-transform:uppercase;
+  color:var(--text-muted);
+}
+.wf-display{
+  font-family:var(--font-display);
+  font-weight:var(--weight-bold);
+  line-height:var(--leading-tight);
+  letter-spacing:var(--tracking-display);
+  text-transform:uppercase;
+  color:var(--text-strong);
+}
+.wf-prose{
+  font-family:var(--font-serif);
+  font-size:var(--text-body);
+  line-height:var(--leading-relaxed);
+  color:var(--text-body);
+}
